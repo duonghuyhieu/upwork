@@ -5,9 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UpworkModule } from './modules/upwork/upwork.module';
 import { AuthModule } from './modules/auth/auth.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, AuthModule, UpworkModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    AuthModule,
+    UpworkModule,
+    BrowserAnimationsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

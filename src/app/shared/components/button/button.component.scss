@@ -1,0 +1,17 @@
+.transparent {
+  background-color: transparent;
+  border: 2px solid var(--green-dark);
+  color: var(--green-dark);
+}
+
+.normal {
+  background-color: var(--green-dark);
+  border: 2px solid var(--green-dark);
+  color: var(--white);
+}
+
+.btn {
+  padding: 8px 24px;
+  font-size: 16px;
+  border-radius: 20px;
+}

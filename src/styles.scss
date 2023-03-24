@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+:root {
+  --green-light: #14a800;
+  --green-dark: #3c8224;
+  --gray-light: #d5e0d5;
+  --gray-dark: #5e6d55;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 14px;
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  src: url(" ../../assets/font/NeueMontreal-Regular.otf") format("opentype");
+}
+
+* {
+  font-family: "Neue Montreal", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}

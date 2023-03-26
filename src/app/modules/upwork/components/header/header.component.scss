@@ -1,6 +1,7 @@
 .logo {
   height: 22.5px;
   margin-top: 10px;
+  margin-right: 16px;
 }
 
 .btn {
@@ -28,7 +29,7 @@
       &__li {
         display: flex;
         align-items: center;
-        margin-left: 16px;
+        margin-right: 16px;
         color: var(--black);
         transition: color 0.2s ease-in-out;
 
@@ -58,10 +59,59 @@
       border-radius: 20px;
       margin-left: 16px;
       display: flex;
+      &__text {
+        display: flex;
+        align-items: center;
+      }
+      &__option {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  &__bottom {
+    text-decoration: none;
+
+    ul {
+      text-decoration: none;
+      list-style: none;
+      display: flex;
+      padding: 10px 24px;
+      margin: 0;
+      li {
+        padding: 10px;
+        a {
+          text-decoration: none;
+          color: var(--black);
+        }
+      }
     }
   }
 }
 
-::ng-deep .mat-select-panel {
-  background-color: transparent;
+.input {
+  &__custom {
+    background-color: transparent;
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+  &__text {
+    width: 161px;
+    margin: 0 20px;
+  }
+  &__option {
+    border-left: 1px solid var(--gray-light);
+    padding-left: 15px;
+    font-size: 16px;
+    width: 85px;
+  }
+}
+
+.icon {
+  margin-top: 2px;
+  margin-left: 10px;
 }

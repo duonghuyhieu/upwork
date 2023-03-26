@@ -19,22 +19,31 @@
   <div class="header__right">
     <div class="header__right__search">
       <div class="header__right__search__text">
-        <mat-icon>search</mat-icon>
-        <!-- <mat-form-field hintLabel="Max 10 characters" appearance="fill">
-          <input matInput #input />
-        </mat-form-field> -->
+        <mat-icon class="icon">search</mat-icon>
+        <input class="input__custom input__text" />
       </div>
       <div class="header__right__search__option">
-        <mat-form-field appearance="fill">
+        <!-- <mat-form-field appearance="fill">
           <mat-select>
             <mat-option value="option">Talen</mat-option>
             <mat-option value="option">Project</mat-option>
             <mat-option value="option">Job</mat-option>
           </mat-select>
-        </mat-form-field>
+        </mat-form-field> -->
+        <select  class="input__custom input__option">
+          <option class="input__custom__option">Talent</option>
+          <option class="input__custom__option">Project</option>
+          <option class="input__custom__option">Job</option>
+        </select>
       </div>
     </div>
-    <button class="btn">Login</button>
+    <button class="btn">Log In</button>
     <app-button type="normal" text="Sign Up"></app-button>
   </div>
+</div>
+<div class="header__bottom">
+  <ul>
+    <li *ngFor="let category of categories"><a href="">{{category}}</a></li>
+    <li class="header__left__select__li">More <mat-icon class="arrow">keyboard_arrow_down</mat-icon></li>
+  </ul>
 </div>

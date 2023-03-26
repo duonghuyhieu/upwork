@@ -14,6 +14,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+
 
 const routes: Routes = [
   { path: 'welcome', component: WelcomeComponent },
@@ -38,6 +40,8 @@ const routes: Routes = [
     SharedModule,
     MatFormFieldModule,
     MatSelectModule,
+    MatInputModule,
+
   ],
 })
 export class UpworkModule {}

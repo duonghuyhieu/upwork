@@ -1,10 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { UpworkComponent } from './modules/upwork/upwork.component';
-import { AuthComponent } from './modules/auth/auth.component';
 const routes: Routes = [
-  { path: '', component: UpworkComponent },
-  { path: 'auth', component: AuthComponent },
+  {
+    path: '',
+    redirectTo: '/upwork/welcome',
+    pathMatch: 'full',
+  },
+  {
+    path: 'upwork',
+    loadChildren: () =>
+      import('./modules/upwork/upwork.module').then((m) => m.UpworkModule),
+  },
+  {
+    path: 'auth',
+    loadChildren: () =>
+      import('./modules/auth/auth.module').then((m) => m.AuthModule),
+  },
 ];
 
 @NgModule({

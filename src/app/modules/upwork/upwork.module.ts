@@ -15,12 +15,20 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
-
+import { FindTalentComponent } from './components/find-talent/find-talent.component';
+import { FindWorkComponent } from './components/find-work/find-work.component';
+import { WhyUpworkComponent } from './components/why-upwork/why-upwork.component';
 
 const routes: Routes = [
-  { path: 'welcome', component: WelcomeComponent },
-  { path: 'work', component: WorkComponent },
-  { path: 'freelance-jobs', component: FreelanceJobsComponent },
+  {
+    path: '',
+    component: UpworkComponent,
+    children: [
+      { path: 'work', component: WorkComponent },
+      { path: 'welcome', component: WelcomeComponent },
+      { path: 'freelance-jobs', component: FreelanceJobsComponent },
+    ],
+  },
 ];
 
 @NgModule({
@@ -31,17 +39,20 @@ const routes: Routes = [
     UpworkComponent,
     HeaderComponent,
     FooterComponent,
+    FindTalentComponent,
+    FindWorkComponent,
+    WhyUpworkComponent,
   ],
   imports: [
     CommonModule,
-    RouterModule.forRoot(routes, { enableTracing: true }),
+    RouterModule.forChild(routes),
     MatIconModule,
     MatButtonModule,
     SharedModule,
     MatFormFieldModule,
     MatSelectModule,
     MatInputModule,
-
   ],
+  exports: [RouterModule],
 })
 export class UpworkModule {}

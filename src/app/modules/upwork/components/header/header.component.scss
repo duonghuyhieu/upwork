@@ -16,7 +16,10 @@
   border-bottom: 1px solid var(--gray-light);
   display: flex;
   justify-content: space-between;
-
+  position: fixed;
+  top: 0px;
+  width: calc(100vw - 48px);
+  background-color: var(--white);
   &__left {
     display: flex;
 
@@ -72,7 +75,10 @@
 
   &__bottom {
     text-decoration: none;
-
+    position: fixed;
+    top: 65px;
+    background-color: var(--white);
+    width: 100vw;
     ul {
       text-decoration: none;
       list-style: none;
@@ -114,4 +120,13 @@
 .icon {
   margin-top: 2px;
   margin-left: 10px;
+}
+
+.navHeader {
+  position: fixed;
+  top: 65px;
+  background-color: aqua;
+  height: 30px;
+  width: 100vw;
+  z-index: 1;
 }

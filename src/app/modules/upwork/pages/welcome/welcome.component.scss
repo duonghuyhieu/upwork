@@ -1,0 +1,81 @@
+.welcome {
+  margin: 120px 180px 80px;
+  &__heading {
+    font-size: 42px;
+    font-family: "Times New Roman", Times, serif;
+    margin-bottom: 16px;
+    line-height: 72px;
+  }
+
+  &__banner1 {
+    display: flex;
+    justify-content: space-between;
+    &__info {
+      h1 {
+        font-size: 80px;
+        line-height: 80px;
+        color: var(--green-light);
+        font-family: "Times New Roman", Times, serif;
+      }
+      h3 {
+        margin-top: 5px;
+        font-size: 22px;
+        color: var(--gray-dark);
+        margin-bottom: 30px;
+      }
+      h4 {
+        margin-top: 70px;
+        margin-bottom: 15px;
+      }
+
+      &__logos {
+        display: flex;
+        img {
+          margin-right: 32px;
+          height: 40px;
+        }
+      }
+    }
+    &__picture {
+      img {
+        height: 500px;
+        margin-right: 70px;
+        margin-top: -20px;
+      }
+    }
+  }
+  &__banner2 {
+    display: flex;
+    margin-top: 40px;
+    &__info {
+      margin-left: 36px;
+
+      &__detail {
+        display: flex;
+        margin-bottom: 20px;
+        svg {
+          height: 24px;
+          margin-right: 24px;
+        }
+        div {
+          h2 {
+            margin: 0;
+            line-height: 22px;
+          }
+        }
+      }
+      &__buttons {
+        display: flex;
+        gap: 24px;
+      }
+    }
+  }
+
+  &__banner3 {
+    p {
+      a {
+        color: var(--green-dark);
+      }
+    }
+  }
+}

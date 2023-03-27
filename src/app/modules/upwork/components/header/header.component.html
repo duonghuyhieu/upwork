@@ -4,7 +4,7 @@
       <use href="../../../../../assets/sgv/logo.svg#logo"></use>
     </svg>
     <ul class="header__left__select">
-      <li class="header__left__select__li">
+      <!-- <li class="header__left__select__li" (mouseenter)="toggleHeader(1)">
         Find Talent <mat-icon class="arrow">keyboard_arrow_down</mat-icon>
       </li>
       <li class="header__left__select__li">
@@ -12,6 +12,17 @@
       </li>
       <li class="header__left__select__li">
         Why Upwork <mat-icon class="arrow">keyboard_arrow_down</mat-icon>
+      </li>
+
+            (mouseleave)="toggleHeader(i)"
+-->
+      <li
+        class="header__left__select__li"
+        *ngFor="let type of types; let i = index"
+        (mouseenter)="toggleHeader(i)"
+        (mouseleave)="toggleHeader(i)"
+      >
+        {{ type }}<mat-icon class="arrow">keyboard_arrow_down</mat-icon>
       </li>
       <li class="header__left__select__li">Enterprise</li>
     </ul>
@@ -30,7 +41,7 @@
             <mat-option value="option">Job</mat-option>
           </mat-select>
         </mat-form-field> -->
-        <select  class="input__custom input__option">
+        <select class="input__custom input__option">
           <option class="input__custom__option">Talent</option>
           <option class="input__custom__option">Project</option>
           <option class="input__custom__option">Job</option>
@@ -43,7 +54,17 @@
 </div>
 <div class="header__bottom">
   <ul>
-    <li *ngFor="let category of categories"><a href="">{{category}}</a></li>
-    <li class="header__left__select__li">More <mat-icon class="arrow">keyboard_arrow_down</mat-icon></li>
+    <li *ngFor="let category of categories">
+      <a href="">{{ category }}</a>
+    </li>
+    <li class="header__left__select__li">
+      More <mat-icon class="arrow">keyboard_arrow_down</mat-icon>
+    </li>
   </ul>
+</div>
+
+<div class="navHeaderWrapper">
+  <app-find-talent *ngIf="showNavHeader1" class="navHeader"></app-find-talent>
+  <app-find-work *ngIf="showNavHeader2" class="navHeader"></app-find-work>
+  <app-why-upwork *ngIf="showNavHeader3" class="navHeader"></app-why-upwork>
 </div>

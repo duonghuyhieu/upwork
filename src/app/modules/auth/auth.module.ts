@@ -7,15 +7,24 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { AuthComponent } from './auth.component';
 
 const routes: Routes = [
-  { path: 'signin', component: SignInComponent },
-  { path: 'signup', component: SignUpComponent },
+  {
+    path: '',
+    redirectTo: 'signIn',
+    pathMatch: 'full',
+  },
+  {
+    path: '',
+    component: AuthComponent,
+    children: [
+      { path: 'signIn', component: SignInComponent },
+      { path: 'signUp', component: SignUpComponent },
+    ],
+  },
 ];
 
 @NgModule({
   declarations: [SignInComponent, SignUpComponent, AuthComponent],
-  imports: [
-    CommonModule,
-    RouterModule.forRoot(routes, { enableTracing: true }),
-  ],
+  imports: [CommonModule, RouterModule.forChild(routes)],
+  exports: [RouterModule],
 })
 export class AuthModule {}

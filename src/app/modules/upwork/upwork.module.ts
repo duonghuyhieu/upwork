@@ -18,6 +18,7 @@ import { MatInputModule } from '@angular/material/input';
 import { FindTalentComponent } from './components/find-talent/find-talent.component';
 import { FindWorkComponent } from './components/find-work/find-work.component';
 import { WhyUpworkComponent } from './components/why-upwork/why-upwork.component';
+import { CatgoryTileComponent } from './components/catgory-tile/catgory-tile.component';
 
 const routes: Routes = [
   {
@@ -42,6 +43,7 @@ const routes: Routes = [
     FindTalentComponent,
     FindWorkComponent,
     WhyUpworkComponent,
+    CatgoryTileComponent,
   ],
   imports: [
     CommonModule,

@@ -72,10 +72,15 @@
   }
 
   &__banner3 {
+    margin-top: 40px;
     p {
       a {
         color: var(--green-dark);
       }
+    }
+    &__category {
+      display: flex;
+      justify-content: space-between;
     }
   }
 }

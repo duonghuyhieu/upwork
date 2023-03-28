@@ -19,6 +19,7 @@ import { FindTalentComponent } from './components/find-talent/find-talent.compon
 import { FindWorkComponent } from './components/find-work/find-work.component';
 import { WhyUpworkComponent } from './components/why-upwork/why-upwork.component';
 import { CatgoryTileComponent } from './components/catgory-tile/catgory-tile.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 const routes: Routes = [
   {
@@ -44,6 +45,7 @@ const routes: Routes = [
     FindWorkComponent,
     WhyUpworkComponent,
     CatgoryTileComponent,
+    CarouselComponent,
   ],
   imports: [
     CommonModule,

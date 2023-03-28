@@ -1,1 +1,75 @@
-<p>sign-up works!</p>
+<div class="signup">
+  <form class="signup__form" [formGroup]="signUpForm" (submit)="onSubmit()">
+    <h1>Sign Up</h1>
+    <mat-form-field appearance="outline">
+      <mat-label>Name</mat-label>
+
+      <input
+        class="login__form__input"
+        matInput
+        type="text"
+        formControlName="name"
+        required
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Age</mat-label>
+
+      <input
+        class="login__form__input"
+        matInput
+        type="number"
+        formControlName="age"
+        required
+      />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Phone number</mat-label>
+
+      <input
+        class="login__form__input"
+        matInput
+        type="text"
+        formControlName="phoneNumber"
+        required
+      />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+
+      <input
+        class="login__form__input"
+        matInput
+        type="email"
+        formControlName="email"
+        required
+      />
+      <mat-error *ngIf="signUpForm.controls['email'].hasError('email')"
+        >Please enter a valid email address.</mat-error
+      >
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+      <input
+        matInput
+        type="password"
+        formControlName="password"
+        required
+        minlength="8"
+      />
+      <mat-error *ngIf="signUpForm.controls['password'].hasError('minlength')"
+        >Password must be at least 8 characters long.</mat-error
+      >
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Sign Up</button>
+  </form>
+  <div class="signup__view">
+    <h1>Your information</h1>
+    <p>Name: {{ signUpForm.controls["name"].value }}</p>
+    <p>Age: {{ signUpForm.controls["age"].value }}</p>
+    <p>Phone number: {{ signUpForm.controls["phoneNumber"].value }}</p>
+    <p>Email: {{ signUpForm.controls["email"].value }}</p>
+  </div>
+</div>

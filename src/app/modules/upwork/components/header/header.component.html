@@ -48,8 +48,12 @@
         </select>
       </div>
     </div>
-    <button class="btn">Log In</button>
-    <app-button type="normal" text="Sign Up"></app-button>
+    <button class="btn" (click)="goToAuth('signIn')">Log In</button>
+    <app-button
+      type="normal"
+      text="Sign Up"
+      (click)="goToAuth('signUp')"
+    ></app-button>
   </div>
 </div>
 <div class="header__bottom">

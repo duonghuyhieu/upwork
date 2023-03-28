@@ -1,0 +1,37 @@
+.signup {
+  display: flex;
+  margin-top: 40px;
+  justify-content: space-around;
+  &__form {
+    width: 400px;
+    border: 1px solid var(--gray-light);
+    padding: 40px;
+    border-radius: 10px;
+
+    h1 {
+    }
+    mat-form-field {
+      width: 100%;
+      .mat-form-field-infix {
+        width: 100%;
+      }
+    }
+    button {
+      width: 50%;
+      margin: 20px 50%;
+      padding: 10px 0;
+      border: 2px solid var(--green-light);
+      background-color: transparent;
+      color: var(--green-light);
+      transform: translateX(-50%);
+      border-radius: 24px;
+    }
+  }
+  &__view {
+    width: 300px;
+
+    padding: 40px;
+    border: 1px solid var(--gray-light);
+    border-radius: 10px;
+  }
+}

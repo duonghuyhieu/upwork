@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -6,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
+  constructor(private router: Router) {}
+
   showNavHeader1: boolean = false;
   showNavHeader2: boolean = false;
   showNavHeader3: boolean = false;
@@ -34,5 +37,10 @@ export class HeaderComponent {
       default:
         break;
     }
+  }
+
+  goToAuth(link: string) {
+    console.log('i was join here');
+    this.router.navigate(['/auth/' + link]);
   }
 }

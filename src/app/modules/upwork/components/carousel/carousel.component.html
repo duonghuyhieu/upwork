@@ -1,0 +1,20 @@
+<div class="carousel-container">
+  <div
+    class="carousel-slide"
+    [style.transform]="'translateX(' + -index * 27 + '%)'"
+  >
+    <div class="carousel-item">
+      <!-- Your content for first item here -->
+    </div>
+    <div class="carousel-item itemmid">
+      <!-- Your content for second item here -->
+    </div>
+    <div class="carousel-item">
+      <!-- Your content for third item here -->
+    </div>
+  </div>
+  <div class="carousel-dots">
+    <span [class.active]="index === 0" (click)="index = 0"></span>
+    <span [class.active]="index === 1" (click)="index = 1"></span>
+  </div>
+</div>

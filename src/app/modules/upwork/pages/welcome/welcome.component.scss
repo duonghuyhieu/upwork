@@ -1,5 +1,12 @@
+%banner__img {
+  margin-top: 60px;
+  img {
+    width: 100%;
+  }
+}
 .welcome {
-  margin: 120px 180px 80px;
+  margin: 120px 0px 80px;
+  padding: 180px;
   &__heading {
     font-size: 42px;
     font-family: "Times New Roman", Times, serif;
@@ -81,6 +88,28 @@
     &__category {
       display: flex;
       justify-content: space-between;
+    }
+  }
+
+  &__banner4 {
+    @extend %banner__img;
+  }
+
+  &__banner5 {
+    @extend %banner__img;
+  }
+
+  &__banner6 {
+    @extend %banner__img;
+  }
+
+  &__banner7 {
+    margin-top: 60px;
+    h1 {
+      font-size: 72px;
+      line-height: 72px;
+      font-family: "Times New Roman", Times, serif;
+      padding-bottom: 20px;
     }
   }
 }

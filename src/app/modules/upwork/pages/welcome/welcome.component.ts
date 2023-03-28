@@ -5,4 +5,13 @@ import { Component } from '@angular/core';
   templateUrl: './welcome.component.html',
   styleUrls: ['./welcome.component.scss'],
 })
-export class WelcomeComponent {}
+export class WelcomeComponent {
+  tags = ['Top skills', 'Trending skills', 'Top skills in US', 'Project Catalog'];
+  selectedTag !: string;
+
+  selectTag(tag: string) {
+    this.selectedTag = tag;
+    console.log(tag)
+
+  }
+}

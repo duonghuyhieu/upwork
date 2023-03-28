@@ -139,4 +139,20 @@
     </h1>
     <app-carousel></app-carousel>
   </div>
+
+  <div class="welcome__banner8">
+    <img src="../../../../../assets/imgs/banner8.png">
+  </div>
+
+  <div class="welcome__skills">
+    <div>
+      <ul>
+        <li *ngFor="let tag of tags" [class.selected]="tag === selectedTag" (click)="selectTag(tag)">
+          {{ tag }}
+        </li>
+      </ul>
+    </div>
+    <div></div>
+    <div></div>
+  </div>
 </div>

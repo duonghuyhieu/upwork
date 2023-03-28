@@ -4,17 +4,15 @@
     [style.transform]="'translateX(' + -index * 27 + '%)'"
   >
     <div class="carousel-item">
-      <!-- Your content for first item here -->
-    </div>
+<img src="../../../../../assets/imgs/slide1.png">    </div>
     <div class="carousel-item itemmid">
-      <!-- Your content for second item here -->
+      <img src="../../../../../assets/imgs/slide2.png">
     </div>
     <div class="carousel-item">
-      <!-- Your content for third item here -->
-    </div>
+      <img src="../../../../../assets/imgs/slide3.png">     </div>
   </div>
   <div class="carousel-dots">
-    <span [class.active]="index === 0" (click)="index = 0"></span>
-    <span [class.active]="index === 1" (click)="index = 1"></span>
+    <div [class.active]="index === 0" (click)="index = 0"><mat-icon>arrow_back</mat-icon></div>
+    <div [class.active]="index === 1" (click)="index = 1"> <mat-icon>arrow_forward</mat-icon></div>
   </div>
 </div>

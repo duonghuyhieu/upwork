@@ -141,18 +141,35 @@
   </div>
 
   <div class="welcome__banner8">
-    <img src="../../../../../assets/imgs/banner8.png">
+    <img src="../../../../../assets/imgs/banner8.png" />
   </div>
 
   <div class="welcome__skills">
     <div>
       <ul>
-        <li *ngFor="let tag of tags" [class.selected]="tag === selectedTag" (click)="selectTag(tag)">
+        <li
+          class="welcome__skills__tag"
+          *ngFor="let tag of tags"
+          [class.active]="selectedTag === tag"
+          (click)="selectTag(tag)"
+        >
           {{ tag }}
         </li>
       </ul>
     </div>
-    <div></div>
-    <div></div>
+    <div>
+      <ul class="welcome__skills__items">
+        <li *ngFor="let item of items1" class="welcome__skills__item">
+          {{ item }}
+        </li>
+      </ul>
+    </div>
+    <div>
+      <ul class="welcome__skills__items">
+        <li *ngFor="let item of items2" class="welcome__skills__item">
+          {{ item }}
+        </li>
+      </ul>
+    </div>
   </div>
 </div>

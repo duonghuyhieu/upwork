@@ -1,0 +1,26 @@
+<div>
+  <div>
+    <p>test pipe</p>
+  </div>
+  <div>
+    <div>
+      <h3>F to C</h3>
+    </div>
+    <div>
+      <p>
+        F : <input type="text" [(ngModel)]="F" /> C :
+        {{ F | transCF : "C" }}
+      </p>
+    </div>
+
+    <div>
+      <h3>C to F</h3>
+    </div>
+    <div>
+      <p>
+        C : <input type="text" [(ngModel)]="C" /> F :
+        {{ C | transCF : "F" }}
+      </p>
+    </div>
+  </div>
+</div>

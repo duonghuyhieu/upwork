@@ -1,3 +1,4 @@
+import { TestPipeComponent } from './pages/test-pipe/test-pipe.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
@@ -9,6 +10,9 @@ import { AuthComponent } from './auth.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { AdminComponent } from './pages/admin/admin.component';
 
 const routes: Routes = [
   {
@@ -22,6 +26,8 @@ const routes: Routes = [
     children: [
       { path: 'signIn', component: SignInComponent },
       { path: 'signUp', component: SignUpComponent },
+      { path: 'test', component: TestPipeComponent },
+      { path: 'admin', component: AdminComponent },
     ],
   },
 ];
@@ -31,6 +37,8 @@ const routes: Routes = [
     SignInComponent,
     SignUpComponent,
     AuthComponent,
+    TestPipeComponent,
+    AdminComponent,
   ],
   imports: [
     CommonModule,
@@ -39,6 +47,8 @@ const routes: Routes = [
     SharedModule,
     ReactiveFormsModule,
     FormsModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ],
   exports: [RouterModule],
 })

@@ -1,1 +1,26 @@
-<p>footer works!</p>
+<div class="footer">
+  <div>
+    <h2>For Clients</h2>
+    <ul>
+      <li *ngFor="let item of forClients">{{ item }}</li>
+    </ul>
+  </div>
+  <div>
+    <h2>For Talen</h2>
+    <ul>
+      <li *ngFor="let item of forTalent">{{ item }}</li>
+    </ul>
+  </div>
+  <div>
+    <h2>Resources</h2>
+    <ul>
+      <li *ngFor="let item of resources">{{ item }}</li>
+    </ul>
+  </div>
+  <div>
+    <h2>Company</h2>
+    <ul>
+      <li *ngFor="let item of company">{{ item }}</li>
+    </ul>
+  </div>
+</div>

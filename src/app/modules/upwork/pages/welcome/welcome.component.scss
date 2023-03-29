@@ -120,4 +120,33 @@
       margin: auto;
     }
   }
+
+  &__skills {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    li {
+      list-style-type: none;
+    }
+
+    &__tag {
+      font-size: 40px;
+      line-height: 40px;
+      margin-bottom: 16px;
+      color: var(--gray-light);
+    }
+    &__items {
+      margin-top: 30px;
+    }
+    &__item {
+      font-size: 24px;
+      margin-bottom: 16px;
+      color: var(--gray-dark);
+      width: 400px;
+    }
+  }
+}
+
+.active {
+  color: var(--green-light);
 }

@@ -12,9 +12,9 @@
       <app-button type="normal" text="Get started"></app-button>
       <h4>Trusted by</h4>
       <div class="welcome__banner1__info__logos">
-        <img src="../../../../../assets/imgs/microsoft.svg" alt="" />
-        <img src="../../../../../assets/imgs/airbnb.svg" alt="" />
-        <img src="../../../../../assets/imgs/bissell.svg" alt="" />
+        <img src="../../../../../assets/sgv/microsoft.svg" alt="" />
+        <img src="../../../../../assets/sgv/airbnb.svg" alt="" />
+        <img src="../../../../../assets/sgv/bissell.svg" alt="" />
       </div>
     </div>
     <div class="welcome__banner1__picture">
@@ -150,7 +150,7 @@
         <li
           class="welcome__skills__tag"
           *ngFor="let tag of tags"
-          [class.active]="selectedTag === tag"
+          [class.active-text]="selectedTag === tag"
           (click)="selectTag(tag)"
         >
           {{ tag }}

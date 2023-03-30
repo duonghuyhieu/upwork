@@ -1,0 +1,89 @@
+.work {
+  margin: 120px 120px 0;
+  padding: 60px;
+  &__banner1 {
+    background-color: #14a800;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 10px;
+    color: var(--white);
+    &__img {
+      display: block;
+      width: 50%;
+      height: 550px;
+    }
+    &__title {
+      h1 {
+        font-size: 56px;
+        line-height: 56px;
+        font-family: "Times New Roman", Times, serif;
+      }
+      p {
+        margin-bottom: 40px;
+      }
+    }
+    &__bottom {
+      position: absolute;
+      bottom: 30px;
+      padding-top: 10px;
+      border-top: 1px solid var(--white);
+      padding-right: 200px;
+      &__logo {
+        display: flex;
+        gap: 40px;
+      }
+    }
+  }
+
+  &__banner2 {
+  }
+
+  &__banner3 {
+    margin-top: 60px;
+    display: flex;
+    padding: 20px 200px;
+    justify-content: space-between;
+    h1 {
+      font-size: 38px;
+      line-height: 38px;
+      margin-bottom: 20px;
+      font-family: "Times New Roman", Times, serif;
+      font-weight: 600;
+    }
+    &__checkList {
+      padding: 0;
+      li {
+        list-style: none;
+        display: flex;
+        p {
+          color: var(--gray-dark);
+          b {
+            color: var(--black);
+          }
+        }
+      }
+      &__logo {
+        color: var(--green-light);
+        margin-right: 10px;
+      }
+    }
+    &__review {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 40px;
+      margin-top: 50px;
+      &__item {
+        padding-top: 10px;
+        padding-right: 60px;
+        border-top: 1px solid var(--gray-light);
+        h1 {
+          margin: 0 0 10px 0;
+          font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        }
+      }
+    }
+  }
+}

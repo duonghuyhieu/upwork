@@ -1,3 +1,4 @@
+import { AccountApiService } from './../../../../core/services/account-api.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Account } from 'src/app/data/account';
@@ -21,7 +22,7 @@ export class SignUpComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private accountService: AccountService
+    private accountService: AccountApiService
   ) {}
 
   ngOnInit(): void {

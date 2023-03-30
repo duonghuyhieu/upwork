@@ -5,8 +5,8 @@
   }
 }
 .welcome {
-  margin: 120px 0px 80px;
-  padding: 180px;
+  margin: 120px 120px 0;
+  padding: 60px;
   &__heading {
     font-size: 42px;
     font-family: "Times New Roman", Times, serif;
@@ -118,6 +118,7 @@
     img {
       display: block;
       margin: auto;
+      width: 95%;
     }
   }
 
@@ -147,6 +148,6 @@
   }
 }
 
-.active {
+.active-text {
   color: var(--green-light);
 }

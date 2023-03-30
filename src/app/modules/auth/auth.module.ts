@@ -13,6 +13,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { AdminComponent } from './pages/admin/admin.component';
+import { TestTwowayComponent } from './components/test-twoway/test-twoway.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   {
@@ -39,6 +41,7 @@ const routes: Routes = [
     AuthComponent,
     TestPipeComponent,
     AdminComponent,
+    TestTwowayComponent,
   ],
   imports: [
     CommonModule,
@@ -49,6 +52,7 @@ const routes: Routes = [
     FormsModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    HttpClientModule,
   ],
   exports: [RouterModule],
 })

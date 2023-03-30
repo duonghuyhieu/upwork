@@ -1,28 +1,22 @@
 <div class="header">
   <div class="header__left">
-    <svg viewBox="0 0 102 28" class="logo">
+    <svg viewBox="0 0 102 28" class="logo" (click)="goTo('welcome')">
       <use href="../../../../../assets/sgv/logo.svg#logo"></use>
     </svg>
     <ul class="header__left__select">
-      <!-- <li class="header__left__select__li" (mouseenter)="toggleHeader(1)">
-        Find Talent <mat-icon class="arrow">keyboard_arrow_down</mat-icon>
-      </li>
-      <li class="header__left__select__li">
-        Find Work <mat-icon class="arrow">keyboard_arrow_down</mat-icon>
-      </li>
-      <li class="header__left__select__li">
-        Why Upwork <mat-icon class="arrow">keyboard_arrow_down</mat-icon>
-      </li>
-
-            (mouseleave)="toggleHeader(i)"
--->
       <li
         class="header__left__select__li"
         *ngFor="let type of types; let i = index"
-        (mouseenter)="toggleHeader(i)"
-        (mouseleave)="toggleHeader(i)"
+        (mouseenter)="onTagHover(type)"
+        (mouseleave)="onTagLeave(type)"
+        [ngClass]="{ active: type.active }"
       >
-        {{ type }}<mat-icon class="arrow">keyboard_arrow_down</mat-icon>
+        {{ type.name }}<mat-icon class="arrow">keyboard_arrow_down</mat-icon>
+        <div *ngIf="type.active" class="navHeader test">
+          <ng-container
+            *ngComponentOutlet="getComponent(type.id)"
+          ></ng-container>
+        </div>
       </li>
       <li class="header__left__select__li">Enterprise</li>
     </ul>
@@ -34,13 +28,6 @@
         <input class="input__custom input__text" />
       </div>
       <div class="header__right__search__option">
-        <!-- <mat-form-field appearance="fill">
-          <mat-select>
-            <mat-option value="option">Talen</mat-option>
-            <mat-option value="option">Project</mat-option>
-            <mat-option value="option">Job</mat-option>
-          </mat-select>
-        </mat-form-field> -->
         <select class="input__custom input__option">
           <option class="input__custom__option">Talent</option>
           <option class="input__custom__option">Project</option>
@@ -65,10 +52,4 @@
       More <mat-icon class="arrow">keyboard_arrow_down</mat-icon>
     </li>
   </ul>
-</div>
-
-<div class="navHeaderWrapper">
-  <app-find-talent *ngIf="showNavHeader1" class="navHeader"></app-find-talent>
-  <app-find-work *ngIf="showNavHeader2" class="navHeader"></app-find-work>
-  <app-why-upwork *ngIf="showNavHeader3" class="navHeader"></app-why-upwork>
 </div>

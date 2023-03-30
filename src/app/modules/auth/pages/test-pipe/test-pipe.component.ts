@@ -8,4 +8,10 @@ import { Component } from '@angular/core';
 export class TestPipeComponent {
   C!: number;
   F!: number;
+
+  myValue: string = '';
+
+  onValueChange(newValue: string) {
+    this.myValue = newValue;
+  }
 }

@@ -1,3 +1,7 @@
+import { WhyUpworkComponent } from './../why-upwork/why-upwork.component';
+import { FindWorkComponent } from './../find-work/find-work.component';
+import { FindTalentComponent } from './../find-talent/find-talent.component';
+import { Type } from './../../interfaces/type';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -9,10 +13,6 @@ import { Router } from '@angular/router';
 export class HeaderComponent {
   constructor(private router: Router) {}
 
-  showNavHeader1: boolean = false;
-  showNavHeader2: boolean = false;
-  showNavHeader3: boolean = false;
-
   categories: string[] = [
     'Development & IT',
     'Design & Creative',
@@ -21,26 +21,37 @@ export class HeaderComponent {
     'Admin & Customer Support',
   ];
 
-  types: string[] = ['Find Talent', 'Find Work', 'Why Upwork'];
+  types: Type[] = [
+    { id: 1, name: 'Find Talent', active: false },
+    { id: 2, name: 'Find Work', active: false },
+    { id: 3, name: 'Why Upwork', active: false },
+  ];
 
-  toggleHeader(index: number) {
-    switch (index) {
-      case 0:
-        this.showNavHeader1 = !this.showNavHeader1;
-        break;
-      case 1:
-        this.showNavHeader2 = !this.showNavHeader2;
-        break;
-      case 2:
-        this.showNavHeader3 = !this.showNavHeader3;
-        break;
-      default:
-        break;
-    }
-  }
+  components = [
+    { id: 1, component: FindTalentComponent },
+    { id: 2, component: FindWorkComponent },
+    { id: 3, component: WhyUpworkComponent },
+  ];
 
   goToAuth(link: string) {
-    console.log('i was join here');
     this.router.navigate(['/auth/' + link]);
+  }
+
+  onTagHover(type: Type) {
+    this.types.forEach((t) => (t.active = false));
+    type.active = true;
+  }
+
+  onTagLeave(type: Type) {
+    type.active = false;
+  }
+
+  getComponent(id: number) {
+    const componentData = this.components.find((c) => c.id === id);
+    return componentData ? componentData.component : null;
+  }
+
+  goTo(link: string) {
+    this.router.navigate(['/upwork/' + link]);
   }
 }

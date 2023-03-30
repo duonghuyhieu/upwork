@@ -1,0 +1,30 @@
+.fw {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--gray-light);
+  padding: 20px;
+  ul {
+    display: flex;
+    color: var(--black);
+    li {
+      list-style: none;
+      margin-left: 20px;
+      border-radius: 10px;
+      padding: 20px;
+      width: 500px;
+
+      &:hover {
+        background-color: #beccb5;
+      }
+    }
+    h2 {
+      font-size: 14px;
+      line-height: 21px;
+      margin: 0;
+    }
+    p {
+      font-size: 13px;
+      color: var(--gray-dark);
+      margin-top: 10px;
+    }
+  }
+}

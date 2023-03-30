@@ -23,4 +23,7 @@
       </p>
     </div>
   </div>
+
+  <app-test-twoway (valueChange)="myValue = $event"></app-test-twoway>
+  <p>{{ myValue }}</p>
 </div>

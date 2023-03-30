@@ -12,7 +12,7 @@
 }
 
 .header {
-  padding: 12px 24px;
+  padding: 12px 24px 0;
   border-bottom: 1px solid var(--gray-light);
   display: flex;
   justify-content: space-between;
@@ -36,7 +36,8 @@
         margin-right: 16px;
         color: var(--black);
         transition: color 0.2s ease-in-out;
-
+        padding-bottom: 16px;
+        padding-top: 12px;
         &:hover {
           color: var(--green-light);
         }
@@ -80,7 +81,7 @@
     top: 65px;
     background-color: var(--white);
     width: 100vw;
-    z-index: 99;
+    z-index: 5;
     ul {
       text-decoration: none;
       list-style: none;
@@ -127,8 +128,7 @@
 .navHeader {
   position: fixed;
   top: 65px;
-  background-color: aqua;
-  height: 30px;
+  left: 0;
   width: 100vw;
-  z-index: 99;
+  z-index: 6;
 }

@@ -20,6 +20,8 @@ import { FindWorkComponent } from './components/find-work/find-work.component';
 import { WhyUpworkComponent } from './components/why-upwork/why-upwork.component';
 import { CatgoryTileComponent } from './components/catgory-tile/catgory-tile.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { AdditionalComponent } from './components/additional/additional.component';
+import { SlideShowComponent } from './components/slide-show/slide-show.component';
 
 const routes: Routes = [
   {
@@ -46,6 +48,8 @@ const routes: Routes = [
     WhyUpworkComponent,
     CatgoryTileComponent,
     CarouselComponent,
+    AdditionalComponent,
+    SlideShowComponent,
   ],
   imports: [
     CommonModule,

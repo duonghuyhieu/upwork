@@ -1,0 +1,30 @@
+.additional {
+  padding: 50px 130px 0;
+  &__item {
+    width: 216px;
+    text-align: center;
+    &__logo {
+      height: 100px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      margin-bottom: 8px;
+    }
+    p {
+      font-size: 14px;
+      color: var(--gray-dark);
+    }
+  }
+  &__list {
+    display: flex;
+    margin-bottom: 50px;
+    &__plus {
+      padding: 0 180px;
+    }
+  }
+  &__arrow {
+    margin: -40px;
+    padding-bottom: 120px;
+    width: 216px;
+  }
+}

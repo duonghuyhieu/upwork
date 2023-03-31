@@ -4,6 +4,12 @@
   color: var(--green-dark);
 }
 
+.transparent2 {
+  background-color: transparent;
+  border: 2px solid var(--white);
+  color: var(--white);
+}
+
 .normal {
   background-color: var(--green-dark);
   border: 2px solid var(--green-dark);

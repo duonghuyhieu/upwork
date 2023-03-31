@@ -28,7 +28,25 @@
     />
   </div>
 
-  <div class="work__banner2"></div>
+  <div class="work__banner2">
+    <h1>Explore the different ways to earn</h1>
+    <ul class="work__banner2__list">
+      <li
+        *ngFor="let item of earns"
+        [ngClass]="{
+          'work__banner2__list__item--active': item.id === selectedItem
+        }"
+        (click)="onClick(item.id)"
+        class="work__banner2__list__item"
+      >
+        {{ item.name }}
+      </li>
+    </ul>
+    <app-additional
+      *ngIf="selectedItem"
+      [itemId]="selectedItem"
+    ></app-additional>
+  </div>
 
   <div class="work__banner3">
     <div>
@@ -96,7 +114,9 @@
     </div>
   </div>
 
-  <div class="work__banner4"></div>
+  <div class="work__banner4">
+    <app-slide-show></app-slide-show>
+  </div>
 
   <div class="work__banner5">
     <h1>The work you want, all in one place</h1>
@@ -133,5 +153,127 @@
       </div>
     </div>
     <p>Want to know more ? <a> Here's how it works</a></p>
+  </div>
+
+  <div class="work__banner6">
+    <h1>Work that’s waiting for you</h1>
+    <div class="work__banner6__waittinglist">
+      <div class="work__banner6__waittinglist__item">
+        <img
+          class="work__banner6__waittinglist__item__img"
+          src="../../../../../assets/imgs/wbanner6-1.png"
+          alt=""
+        />
+        <div class="work__banner6__waittinglist__item__text">
+          <h2>Development & IT</h2>
+          <p>20K+ jobs posted weekly</p>
+        </div>
+      </div>
+      <div class="work__banner6__waittinglist__item">
+        <img
+          class="work__banner6__waittinglist__item__img"
+          src="../../../../../assets/imgs/wbanner6-2.png"
+          alt=""
+        />
+        <div class="work__banner6__waittinglist__item__text">
+          <h2>Sales & Marketing</h2>
+          <p>10K+ jobs posted weekly</p>
+        </div>
+      </div>
+      <div class="work__banner6__waittinglist__item">
+        <img
+          class="work__banner6__waittinglist__item__img"
+          src="../../../../../assets/imgs/wbanner6-3.png"
+          alt=""
+        />
+        <div class="work__banner6__waittinglist__item__text">
+          <h2>Writing & Translation</h2>
+          <p>10K+ jobs posted weekly</p>
+        </div>
+      </div>
+      <div class="work__banner6__waittinglist__item">
+        <img
+          class="work__banner6__waittinglist__item__img"
+          src="../../../../../assets/imgs/wbanner6-4.png"
+          alt=""
+        />
+        <div class="work__banner6__waittinglist__item__text">
+          <h2>Design & Creative</h2>
+          <p>15K+ jobs posted weekly</p>
+        </div>
+      </div>
+      <div class="work__banner6__waittinglist__item">
+        <img
+          class="work__banner6__waittinglist__item__img"
+          src="../../../../../assets/imgs/wbanner6-5.png"
+          alt=""
+        />
+        <div class="work__banner6__waittinglist__item__text">
+          <h2>Admin & Customer Support</h2>
+          <p>5K+ jobs posted weekly</p>
+        </div>
+      </div>
+      <div class="work__banner6__waittinglist__item">
+        <img
+          class="work__banner6__waittinglist__item__img"
+          src="../../../../../assets/imgs/wbanner6-6.png"
+          alt=""
+        />
+        <div class="work__banner6__waittinglist__item__text">
+          <h2>Finance & Accounting</h2>
+          <p>2K+ jobs posted weekly</p>
+        </div>
+      </div>
+    </div>
+    <a>Brower more</a>
+    <div class="work__banner6__button">
+      <app-button type="normal" text="Create your profile"></app-button>
+    </div>
+  </div>
+
+  <div class="work__banner7">
+    <h1>Our support</h1>
+    <div>
+      <div class="work__banner7__support">
+        <h2>Client reviews</h2>
+        <p>Read client details and feedback from professionals like you.</p>
+      </div>
+      <div class="work__banner7__support">
+        <h2>Protected payments</h2>
+        <p>Get paid the way you want, secure and fully protected.</p>
+      </div>
+      <div class="work__banner7__support">
+        <h2>Answers to questions</h2>
+        <p>Everything you need in our help center, resources, and community.</p>
+      </div>
+    </div>
+    <div>
+      <div class="work__banner7__support">
+        <h2>Trusted jobs</h2>
+        <p>
+          We use various tools to detect and reduce fraud with a dedicated team
+          24/7.
+        </p>
+      </div>
+      <div class="work__banner7__support">
+        <h2>Help with disputes</h2>
+        <p>We’ll step in and help you resolve a tricky situation.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="work__banner8">
+    <div class="work__banner8__item">
+      <div class="work__banner8__item__img">
+        <img src="../../../../../assets/imgs/wbanner8.png" />
+      </div>
+
+      <h2>Ready to start?</h2>
+      <app-button
+        class="work__banner8__item__button"
+        type="transparent2"
+        text="Create Your Profile"
+      ></app-button>
+    </div>
   </div>
 </div>

@@ -1,0 +1,103 @@
+<div class="ss">
+  <div>
+    <div *ngIf="currentIndex == 0" class="ss__item">
+      <img
+        class="ss__item__img"
+        src="../../../../../assets/imgs/wbanner4-1.jpeg"
+      />
+      <div class="ss__item__text">
+        <h2>Ambika M.</h2>
+        <h3>
+          Market Researcher, USA. Masters Degree and expert on Market Research
+          Online Communities.
+        </h3>
+        <span>$60/hr </span>
+        <p>
+          "I turned to Upwork as a way to gain more control of my career. I love
+          being able to choose everything from who I work with to how I spend my
+          day."
+        </p>
+      </div>
+    </div>
+    <div *ngIf="currentIndex == 1" class="ss__item">
+      <img
+        class="ss__item__img"
+        src="../../../../../assets/imgs/wbanner4-2.png"
+      />
+      <div class="ss__item__text">
+        <h2>Alexander N.</h2>
+        <h3>
+          Expert Software Engineer, Cyprus. Over $1M earned on Upwork to date.
+        </h3>
+        <span>$90/hr</span>
+        <p>
+          "The success I've achieved simply would not have been possible without
+          Upwork."
+        </p>
+      </div>
+    </div>
+    <div *ngIf="currentIndex == 2" class="ss__item">
+      <img
+        class="ss__item__img"
+        src="../../../../../assets/imgs/wbanner4-3.jpeg"
+      />
+      <div class="ss__item__text">
+        <h2>Wahidul M.</h2>
+        <h3>
+          UX/UI Designer, Bangladesh. Designed over 100 websites, iOS and
+          Android mobile apps.
+        </h3>
+        <span>$50/hr </span>
+        <p>
+          "Upwork has enabled me to build a professional career I love and live
+          a life I love, while constantly developing new skills."
+        </p>
+      </div>
+    </div>
+    <div *ngIf="currentIndex == 3" class="ss__item">
+      <img
+        class="ss__item__img"
+        src="../../../../../assets/imgs/wbanner4-4.jpg"
+      />
+      <div class="ss__item__text">
+        <h2>Kolya T.</h2>
+        <h3>
+          Owner of Wordpress Lab Agency, USA. Certified Wordpress expert who
+          built his own agency on Upwork.
+        </h3>
+        <span>$70/hr </span>
+        <p>
+          "Upwork is more than a platform. It is a lifestyle. It has helped me
+          grow my agency by three digits and generates more leads than any other
+          channel."
+        </p>
+      </div>
+    </div>
+    <div *ngIf="currentIndex == 4" class="ss__item">
+      <img
+        class="ss__item__img"
+        src="../../../../../assets/imgs/wbanner4-5.jpg"
+      />
+      <div class="ss__item__text">
+        <h2>Sasheen M.</h2>
+        <h3>
+          Customer Experience Consultant, USA. Developed customer service
+          systems for 20 years.
+        </h3>
+        <span>$60/hr </span>
+        <p>
+          “Upwork has enabled me to increase my rates. I know what I'm bringing
+          to the table and love the feeling of being able to help a variety of
+          clients."
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <button *ngIf="currentIndex != 0" (click)="onPrevClick()" class="prebtn btn">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  <button *ngIf="currentIndex != 4" (click)="onNextClick()" class="nextbtn btn">
+    <mat-icon>arrow_forward</mat-icon>
+  </button>
+</div>

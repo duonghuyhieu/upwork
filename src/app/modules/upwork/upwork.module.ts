@@ -22,6 +22,7 @@ import { CatgoryTileComponent } from './components/catgory-tile/catgory-tile.com
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { AdditionalComponent } from './components/additional/additional.component';
 import { SlideShowComponent } from './components/slide-show/slide-show.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   {
@@ -60,6 +61,7 @@ const routes: Routes = [
     MatFormFieldModule,
     MatSelectModule,
     MatInputModule,
+    HttpClientModule,
   ],
   exports: [RouterModule],
 })

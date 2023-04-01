@@ -1,1 +1,33 @@
-<div class="fj"></div>
+<div class="fj">
+  <h1>Find the best freelance jobs
+  </h1>
+  <h3>Browse jobs posted on Upwork, or jump right in and create a free profile to find the work that you love to do.
+  </h3>
+  <div>
+    <app-button type="normal" text="Find Work"></app-button>
+    <h2>Watch a demo</h2>
+  </div>
+  <div>
+    <div>
+      <h4>Type of Work</h4>
+      <ul>
+        <li (click)="changeType(0)">Any type of work</li>
+        <li (click)="changeType(1)">Development & IT</li>
+        <li (click)="changeType(2)">Design & Creative</li>
+        <li (click)="changeType(3)">Finance & Accounting</li>
+        <li (click)="changeType(4)">Admin & Customer Support</li>
+        <li (click)="changeType(5)">Engineering & Architecture</li>
+        <li (click)="changeType(6)">Legal</li>
+        <li (click)="changeType(7)">Sales & Marketing</li>
+        <li (click)="changeType(8)">Writing & Translation</li>
+      </ul>
+    </div>
+    <div>
+      <li *ngFor="let item of filterData">
+        {{item.name}}
+      </li>
+    </div>
+  </div>
+  <div>{{dataFromApi[0].name}}</div>
+
+</div>

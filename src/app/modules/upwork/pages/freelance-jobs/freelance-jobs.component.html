@@ -3,12 +3,12 @@
   </h1>
   <h3>Browse jobs posted on Upwork, or jump right in and create a free profile to find the work that you love to do.
   </h3>
-  <div>
+  <div class="fj__buttons">
     <app-button type="normal" text="Find Work"></app-button>
-    <h2>Watch a demo</h2>
+    <a>Watch a demo</a>
   </div>
-  <div>
-    <div>
+  <div class="fj__main">
+    <div class="fj__main__select">
       <h4>Type of Work</h4>
       <ul>
         <li (click)="changeType(0)">Any type of work</li>
@@ -22,12 +22,13 @@
         <li (click)="changeType(8)">Writing & Translation</li>
       </ul>
     </div>
-    <div>
-      <li *ngFor="let item of filterData">
+    <div class="fj__main__show">
+      <h2>{{filterData.length}} result found</h2>
+      <ul class="fj__main__show__list">     <li *ngFor="let item of filterData">
         {{item.name}}
-      </li>
+      </li></ul>
+
     </div>
   </div>
-  <div>{{dataFromApi[0].name}}</div>
 
 </div>

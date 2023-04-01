@@ -9,14 +9,16 @@ import { work } from 'src/app/data/work';
 })
 export class FreelanceJobsComponent implements OnInit {
   dataFromApi: work[] = [];
-  filterData: work[] = this.dataFromApi;
 
   constructor(private workApi: WorkApiService) {}
   ngOnInit() {
     this.workApi.getAllWorks().subscribe(data => {
       this.dataFromApi = data;
+      this.filterData = data;
     });
   }
+  filterData: work[] = [];
+
 
 changeType(type : number){
   switch (type ) {
@@ -31,22 +33,22 @@ changeType(type : number){
       break;
     case 3:
     this.filterData = this.dataFromApi.filter(w => w.type == 3);
-          break;
-          case 4:
-            this.filterData = this.dataFromApi.filter(w => w.type == 4);
-            break;
-            case 5:
-              this.filterData = this.dataFromApi.filter(w => w.type == 5);
-              break;
-              case 6:
-                this.filterData = this.dataFromApi.filter(w => w.type == 6);
-                break;
-                case 7:
-                  this.filterData = this.dataFromApi.filter(w => w.type == 7);
-                  break;
-                  case 8:
-                    this.filterData = this.dataFromApi.filter(w => w.type == 8);
-                    break;
+      break;
+    case 4:
+      this.filterData = this.dataFromApi.filter(w => w.type == 4);
+break;
+case 5:
+  this.filterData = this.dataFromApi.filter(w => w.type == 5);
+  break;
+  case 6:
+    this.filterData = this.dataFromApi.filter(w => w.type == 6);
+    break;
+    case 7:
+this.filterData = this.dataFromApi.filter(w => w.type == 7);
+break;
+case 8:
+  this.filterData = this.dataFromApi.filter(w => w.type == 8);
+  break;
     default:
       break;
   }
